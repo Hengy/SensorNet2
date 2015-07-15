@@ -206,7 +206,7 @@ def main():
                         help='TCP port for node communication') 
     
     # Parse args
-    args = parser.parse_args('192.168.0.102 -v -l DEBUG'.split())
+    args = parser.parse_args()
     
     # Get local IP address
     IP_LOCAL = args.localip[0]
