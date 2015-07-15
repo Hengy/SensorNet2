@@ -164,7 +164,7 @@ def main():
     
     PORT_NODE_COMM = 0  # Node communication port
 
-    IP_LOCAL = '192.168.0.102'       # Local IP
+    IP_LOCAL = '127.0.0.1'       # Local IP
     
     LOG_LEVEL = logging.INFO        # Log level INFO by default
     
@@ -183,6 +183,8 @@ def main():
     parser = argparse.ArgumentParser(description='Control software for the'
                                                  ' SensorNet home automation'
                                                  ' and sensor network.')
+    parser.add_argument('localip', nargs=1, default=IP_LOCAL,
+                        help='IP address of local machine running SensorNet.')
     parser.add_argument('-v', '--verbose', action='store_true',
                         help='Enable verbose mode.')
     parser.add_argument('-l', '--log_level', default=LOG_LEVEL,
@@ -204,7 +206,12 @@ def main():
                         help='TCP port for node communication') 
     
     # Parse args
-    args = parser.parse_args('-v -l DEBUG'.split())
+    args = parser.parse_args('192.168.0.102 -v -l DEBUG'.split())
+    
+    # Get local IP address
+    IP_LOCAL = args.localip[0]
+    
+    print IP_LOCAL
     
     if (args.verbose):    
         global VERBOSE
