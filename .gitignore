@@ -44,3 +44,6 @@ Temporary Items
 
 # Eclipse project files
 .pyc
+
+# SensorNet log files
+.log
