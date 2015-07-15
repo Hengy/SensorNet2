@@ -18,6 +18,7 @@ import os
 import select
 import signal
 import socket
+import struct
 import sys
 import threading
 import time
@@ -83,9 +84,13 @@ def srv_dscv_process(VERBOSE, LOG_LEVEL, multicast_ip, multicast_port, ip_local,
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     
     # Add socket to multicast group
+#     group = socket.inet_aton(multicast_ip)
+#     iface = socket.inet_aton('239.255.0.1')
+#     sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, group+iface)
+    
     group = socket.inet_aton(multicast_ip)
-    iface = socket.inet_aton('239.255.0.1')
-    sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, group+iface)
+    mreq = struct.pack('4sL', group, socket.INADDR_ANY)
+    sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
     
     # Wait for UDP packet
     while True:
