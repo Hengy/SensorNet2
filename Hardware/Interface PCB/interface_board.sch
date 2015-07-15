@@ -13748,81 +13748,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="switch-dil">
-<description>&lt;b&gt;DIL Switches and Code Switches&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SD4-01">
-<description>&lt;b&gt;DIL/CODE SWITCH&lt;/b&gt;&lt;p&gt;
-Mors</description>
-<wire x1="2.032" y1="-3.175" x2="2.032" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-2.032" y1="3.175" x2="-2.032" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="-0.635" y2="1.27" width="0.254" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="-0.635" y2="-1.27" width="0.254" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="0.635" y2="1.27" width="0.254" layer="21"/>
-<wire x1="-2.032" y1="-3.175" x2="-0.762" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="2.032" y1="-3.175" x2="0.762" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="0.762" y1="-3.175" x2="-0.762" y2="-3.175" width="0.254" layer="51"/>
-<wire x1="2.032" y1="3.175" x2="0.762" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-2.032" y1="3.175" x2="-0.762" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-0.762" y1="3.175" x2="0.762" y2="3.175" width="0.254" layer="51"/>
-<wire x1="0.508" y1="-1.016" x2="-0.508" y2="-1.016" width="0.254" layer="21"/>
-<wire x1="-0.508" y1="-0.254" x2="0.508" y2="-0.254" width="0.254" layer="21"/>
-<pad name="1" x="0" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="2" x="0" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<text x="-0.381" y="-2.667" size="0.9906" layer="21" ratio="12">1</text>
-<text x="-2.3622" y="-3.1242" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="3.6322" y="-3.1496" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-<text x="-1.651" y="1.7018" size="0.9906" layer="21" ratio="12">ON</text>
-<rectangle x1="-0.381" y1="-3.937" x2="0.381" y2="-3.175" layer="51"/>
-<rectangle x1="-0.381" y1="3.175" x2="0.381" y2="3.937" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="DIP01">
-<wire x1="-1.905" y1="5.08" x2="-1.905" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="-1.905" y1="5.08" x2="1.905" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="1.905" y1="5.08" x2="1.905" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="-1.905" y1="-5.08" x2="1.905" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="0.508" y1="-2.54" x2="-0.508" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="-0.508" y1="2.54" x2="0.508" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0.508" y1="2.54" x2="0.508" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="-0.508" y1="-2.54" x2="-0.508" y2="2.54" width="0.1524" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="95" rot="R90">&gt;NAME</text>
-<text x="4.445" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<text x="-0.127" y="-4.064" size="0.9906" layer="94" ratio="14">1</text>
-<text x="-0.889" y="3.175" size="0.9906" layer="94" ratio="14">ON</text>
-<rectangle x1="-0.254" y1="-2.286" x2="0.254" y2="0" layer="94"/>
-<pin name="2" x="0" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="1" x="0" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SD4-01" prefix="S" uservalue="yes">
-<description>&lt;b&gt;DIL/CODE SWITCH&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="DIP01" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SD4-01">
-<connects>
-<connect gate="1" pin="1" pad="1"/>
-<connect gate="1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="jumper">
 <description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -13884,6 +13809,63 @@ Mors</description>
 <rectangle x1="-1.4732" y1="0.2032" x2="-1.3462" y2="0.3302" layer="51"/>
 <rectangle x1="-1.1176" y1="0.5842" x2="-0.9906" y2="0.7112" layer="51"/>
 </package>
+<package name="JP2">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<wire x1="-3.81" y1="-1.016" x2="-3.81" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="3.556" y1="1.27" x2="1.524" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.016" x2="1.524" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="3.556" y1="-1.27" x2="1.524" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-1.016" x2="1.524" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.556" y1="-1.27" x2="3.81" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="3.556" y1="1.27" x2="3.81" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="1.016" x2="3.81" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="1.27" x2="1.27" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="1.27" x2="-1.016" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.016" x2="-1.016" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="1.27" x2="-1.27" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="1.016" x2="-3.556" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="1.27" x2="-3.556" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-1.27" x2="1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-1.016" x2="-1.016" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="-1.27" x2="-1.27" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-1.016" x2="-3.556" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-1.27" x2="-1.016" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.524" y1="-1.27" x2="-3.556" y2="-1.27" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="0.9144" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="0.9144" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="0.9144" shape="long" rot="R90"/>
+<text x="-3.556" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-2.667" size="0.9906" layer="21" ratio="12">1</text>
+<text x="0" y="-2.667" size="0.9906" layer="21" ratio="12">2</text>
+<text x="2.54" y="-2.667" size="0.9906" layer="21" ratio="12">3</text>
+<text x="-3.556" y="-4.318" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-2.8448" y1="-0.3048" x2="-2.2352" y2="0.3048" layer="51"/>
+<rectangle x1="-0.3048" y1="-0.3048" x2="0.3048" y2="0.3048" layer="51"/>
+<rectangle x1="2.2352" y1="-0.3048" x2="2.8448" y2="0.3048" layer="51"/>
+</package>
+<package name="JP1">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<wire x1="-1.016" y1="0" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="0" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.254" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="-2.54" x2="1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="2.286" x2="1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="2.286" x2="1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="2.54" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="2.286" x2="-1.016" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="2.286" x2="-1.27" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-2.54" x2="-1.27" y2="-2.286" width="0.1524" layer="21"/>
+<wire x1="-1.016" y1="-2.54" x2="1.016" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="-1.27" drill="0.9144" shape="long"/>
+<pad name="2" x="0" y="1.27" drill="0.9144" shape="long"/>
+<text x="-1.651" y="-2.54" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="2.921" y="-2.54" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.3048" y1="0.9652" x2="0.3048" y2="1.5748" layer="51"/>
+<rectangle x1="-0.3048" y1="-1.5748" x2="0.3048" y2="-0.9652" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SJ">
@@ -13895,6 +13877,37 @@ Mors</description>
 <text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="2" x="5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="JP3E">
+<wire x1="2.54" y1="0" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="-3.175" y1="0" x2="3.175" y2="0" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.175" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0.635" x2="-3.175" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="-3.175" y1="0.635" x2="-3.175" y2="0" width="0.4064" layer="94"/>
+<text x="-3.81" y="0" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.715" y="0" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="0" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="2.54" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="JP2E">
+<wire x1="0" y1="0" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.27" width="0.4064" layer="94"/>
+<wire x1="-0.635" y1="0" x2="3.175" y2="0" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.175" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="3.175" y1="0.635" x2="-0.635" y2="0.635" width="0.4064" layer="94"/>
+<wire x1="-0.635" y1="0.635" x2="-0.635" y2="0" width="0.4064" layer="94"/>
+<text x="-1.27" y="0" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.715" y="0" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="1" x="0" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="2.54" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -13917,6 +13930,41 @@ Mors</description>
 <connects>
 <connect gate="1" pin="1" pad="1"/>
 <connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JP2E" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="JP3E" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JP2">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+<connect gate="1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JP1E" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;JUMPER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="JP2E" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="JP1">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13965,8 +14013,6 @@ Mors</description>
 <part name="JP3" library="pinhead" deviceset="PINHD-2X4" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
-<part name="R3" library="rcl" deviceset="R-US_" device="R1206" value="10k"/>
-<part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
 <part name="U1" library="bss138_sot_23" deviceset="BSS138-7-F" device=""/>
 <part name="U2" library="bss138_sot_23" deviceset="BSS138-7-F" device=""/>
 <part name="U3" library="bss138_sot_23" deviceset="BSS138-7-F" device=""/>
@@ -13981,7 +14027,6 @@ Mors</description>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X3" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="S1" library="switch-dil" deviceset="SD4-01" device="" value="PRGM"/>
 <part name="SJ1" library="jumper" deviceset="SJ" device=""/>
 <part name="SJ2" library="jumper" deviceset="SJ" device=""/>
 <part name="SJ3" library="jumper" deviceset="SJ" device=""/>
@@ -13998,6 +14043,8 @@ Mors</description>
 <part name="R11" library="rcl" deviceset="R-US_" device="R1206" value="10k"/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
+<part name="JP5" library="jumper" deviceset="JP2E" device=""/>
+<part name="JP6" library="jumper" deviceset="JP1E" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14027,24 +14074,22 @@ bi-directional level converters on I2C GPIO lines?</text>
 </instance>
 <instance part="GND3" gate="1" x="55.88" y="109.22"/>
 <instance part="GND4" gate="1" x="60.96" y="22.86"/>
-<instance part="+3V2" gate="G$1" x="55.88" y="35.56"/>
+<instance part="+3V2" gate="G$1" x="45.72" y="43.18"/>
 <instance part="JP1" gate="A" x="147.32" y="45.72"/>
 <instance part="GND5" gate="1" x="137.16" y="27.94"/>
 <instance part="GND6" gate="1" x="160.02" y="27.94"/>
 <instance part="+3V3" gate="G$1" x="137.16" y="63.5"/>
 <instance part="+3V4" gate="G$1" x="162.56" y="63.5"/>
-<instance part="RESET" gate="G$1" x="-48.26" y="-12.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="-50.8" y="-15.24" size="1.778" layer="95" rot="R90"/>
+<instance part="RESET" gate="G$1" x="-83.82" y="-12.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="-86.36" y="-15.24" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="GND7" gate="1" x="-48.26" y="-22.86"/>
-<instance part="+3V5" gate="G$1" x="-48.26" y="12.7"/>
-<instance part="R2" gate="G$1" x="-48.26" y="2.54" rot="R90"/>
-<instance part="GND8" gate="1" x="-35.56" y="7.62"/>
+<instance part="GND7" gate="1" x="-83.82" y="-22.86"/>
+<instance part="+3V5" gate="G$1" x="-83.82" y="12.7"/>
+<instance part="R2" gate="G$1" x="-83.82" y="2.54" rot="R90"/>
+<instance part="GND8" gate="1" x="-35.56" y="12.7"/>
 <instance part="JP3" gate="A" x="160.02" y="88.9"/>
 <instance part="GND10" gate="1" x="149.86" y="81.28"/>
 <instance part="+3V7" gate="G$1" x="172.72" y="99.06"/>
-<instance part="R3" gate="G$1" x="-35.56" y="38.1" rot="R90"/>
-<instance part="+3V8" gate="G$1" x="-35.56" y="48.26"/>
 <instance part="U1" gate="A" x="15.24" y="58.42"/>
 <instance part="U2" gate="A" x="17.78" y="20.32"/>
 <instance part="U3" gate="A" x="73.66" y="-2.54"/>
@@ -14059,7 +14104,6 @@ bi-directional level converters on I2C GPIO lines?</text>
 <instance part="P+3" gate="1" x="38.1" y="38.1"/>
 <instance part="JP2" gate="A" x="-88.9" y="58.42" rot="R180"/>
 <instance part="GND9" gate="1" x="-78.74" y="48.26"/>
-<instance part="S1" gate="1" x="-35.56" y="20.32"/>
 <instance part="SJ1" gate="1" x="-71.12" y="68.58" rot="R90"/>
 <instance part="SJ2" gate="1" x="-63.5" y="68.58" rot="R90"/>
 <instance part="SJ3" gate="1" x="-71.12" y="50.8" rot="R90"/>
@@ -14076,6 +14120,8 @@ bi-directional level converters on I2C GPIO lines?</text>
 <instance part="R11" gate="G$1" x="180.34" y="5.08" rot="R90"/>
 <instance part="P+5" gate="1" x="93.98" y="15.24"/>
 <instance part="P+6" gate="1" x="180.34" y="15.24"/>
+<instance part="JP5" gate="1" x="-38.1" y="30.48"/>
+<instance part="JP6" gate="A" x="53.34" y="40.64"/>
 </instances>
 <busses>
 </busses>
@@ -14194,11 +14240,7 @@ bi-directional level converters on I2C GPIO lines?</text>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
 <pinref part="RESET" gate="G$1" pin="1"/>
-<wire x1="-48.26" y1="-20.32" x2="-48.26" y2="-17.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="-35.56" y1="12.7" x2="-35.56" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="-83.82" y1="-20.32" x2="-83.82" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="7"/>
@@ -14217,6 +14259,11 @@ bi-directional level converters on I2C GPIO lines?</text>
 <wire x1="-81.28" y1="99.06" x2="-73.66" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="99.06" x2="-73.66" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="JP5" gate="1" pin="3"/>
+<wire x1="-35.56" y1="15.24" x2="-35.56" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -14249,8 +14296,12 @@ bi-directional level converters on I2C GPIO lines?</text>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="68.58" y1="30.48" x2="55.88" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="30.48" x2="55.88" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="30.48" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="30.48" x2="45.72" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="30.48" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="JP6" gate="A" pin="1"/>
+<wire x1="53.34" y1="38.1" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
+<junction x="53.34" y="30.48"/>
 </segment>
 <segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
@@ -14267,18 +14318,13 @@ bi-directional level converters on I2C GPIO lines?</text>
 <segment>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-48.26" y1="10.16" x2="-48.26" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="10.16" x2="-83.82" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="2"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
 <wire x1="165.1" y1="93.98" x2="172.72" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="93.98" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="+3V8" gate="G$1" pin="+3V3"/>
-<wire x1="-35.56" y1="43.18" x2="-35.56" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="G"/>
@@ -14398,11 +14444,11 @@ bi-directional level converters on I2C GPIO lines?</text>
 <segment>
 <pinref part="RESET" gate="G$1" pin="2"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-48.26" y1="-2.54" x2="-48.26" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="-5.08" x2="-48.26" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="-5.08" x2="-40.64" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-48.26" y="-5.08"/>
-<label x="-43.18" y="-5.08" size="1.778" layer="95"/>
+<wire x1="-83.82" y1="-2.54" x2="-83.82" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-5.08" x2="-83.82" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-5.08" x2="-76.2" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-83.82" y="-5.08"/>
+<label x="-78.74" y="-5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="RESET"/>
@@ -14413,8 +14459,10 @@ bi-directional level converters on I2C GPIO lines?</text>
 <net name="CH_PD" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="CH_PD"/>
-<wire x1="68.58" y1="35.56" x2="60.96" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="35.56" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
 <label x="60.96" y="35.56" size="1.778" layer="95"/>
+<pinref part="JP6" gate="A" pin="2"/>
+<wire x1="55.88" y1="38.1" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="6"/>
@@ -14487,18 +14535,10 @@ bi-directional level converters on I2C GPIO lines?</text>
 <label x="142.24" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-35.56" y1="27.94" x2="-35.56" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="30.48" x2="-50.8" y2="30.48" width="0.1524" layer="91"/>
-<label x="-50.8" y="30.48" size="1.778" layer="95"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="-35.56" y1="30.48" x2="-35.56" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-35.56" y="30.48"/>
-<pinref part="S1" gate="1" pin="2"/>
-</segment>
-<segment>
-<pinref part="JP1" gate="A" pin="4"/>
-<wire x1="175.26" y1="53.34" x2="152.4" y2="53.34" width="0.1524" layer="91"/>
-<label x="167.64" y="53.34" size="1.778" layer="95"/>
+<wire x1="-38.1" y1="20.32" x2="-63.5" y2="20.32" width="0.1524" layer="91"/>
+<label x="-63.5" y="20.32" size="1.778" layer="95"/>
+<pinref part="JP5" gate="1" pin="2"/>
+<wire x1="-38.1" y1="20.32" x2="-38.1" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO0"/>
@@ -14665,6 +14705,19 @@ bi-directional level converters on I2C GPIO lines?</text>
 <wire x1="93.98" y1="0" x2="93.98" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="93.98" y="-2.54"/>
 <label x="101.6" y="-2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GPIO0_EXT" class="0">
+<segment>
+<pinref part="JP5" gate="1" pin="1"/>
+<wire x1="-63.5" y1="22.86" x2="-40.64" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="22.86" x2="-40.64" y2="27.94" width="0.1524" layer="91"/>
+<label x="-63.5" y="22.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="175.26" y1="53.34" x2="152.4" y2="53.34" width="0.1524" layer="91"/>
+<label x="167.64" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
