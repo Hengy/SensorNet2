@@ -9,11 +9,13 @@ Author: Matt Hengeveld
 E-mail: mrhengeveld@gmail.com
 '''
 
-import ConfigParser
 import argparse
+import ConfigParser
 import datetime
+import errno
 import logging
 from multiprocessing import Process
+import node_handler
 import os
 import select
 import signal
@@ -68,19 +70,15 @@ def srv_dscv_process(VERBOSE, LOG_LEVEL, multicast_ip, multicast_port, ip_local,
     '''
     
     # Enable logging unless disabled
-    if (LOG_LEVEL > -1):
-        logging.basicConfig(filename='sensornet_service_discovery.log', format='%(levelname)s %(message)s', level=LOG_LEVEL)
+#     if (LOG_LEVEL > -1):
+#         logging.basicConfig(filename='sensornet_service_discovery.log', format='%(levelname)s %(message)s', level=LOG_LEVEL)
     
 #     if (VERBOSE):
     printv('info', 'Starting service discovery process on multicast group {0}, port {1}'.format(multicast_ip, multicast_port), VERBOSE)
         
     # Multicast UDP socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    
-    # Bind to socket - all interfaces
     sock.bind(('',multicast_port))
-    
-    # Make sure socket is reusable
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     
     # Add socket to multicast group
@@ -95,7 +93,12 @@ def srv_dscv_process(VERBOSE, LOG_LEVEL, multicast_ip, multicast_port, ip_local,
     # Wait for UDP packet
     while True:
         printv('info', 'Listening for UDP packets...', VERBOSE)
-        msg, address = sock.recvfrom(1024)
+        
+        try:
+            msg = sock.recv(1024)
+        except socket.error as (code, err_msg):
+            printv('critical','Unhandled socket exception in service discovery thread. Code: {0}. Error message: {1}'.format(code, err_msg),VERBOSE)
+            sys.exit()
         
         msg_str = str(msg)
 
@@ -277,24 +280,30 @@ def main():
     #---------------------------------------------------------------------
     global exit_flag
     
-    while not exit_flag:
-        # Select socket with data
-        data_sockets, _, _ = select.select([sock_client_comm,sock_node_comm],
-                                           [],[])
+    while exit_flag == 0:
         
+        try:
+            # Select socket with data
+            data_sockets, _, _ = select.select([sock_client_comm,sock_node_comm],
+                                               [],[])
+        except select.error as (code, err_msg):
+            printv('critical','Unhandled socket exception in main thread. Code: {0}. Error message: {1}'.format(code, err_msg))
+            sys.exit()
+         
         if data_sockets:
             if (sock_client_comm in data_sockets):
                 client_conn, client_addr = sock_client_comm.accept()
                 client_data = client_conn.recv(1024)
                 printv('debug','Client data: {0}'.format(client_data))
-                
+                 
                 # Create new thread to handle client
-                
+                node_t = node_handler()
+                 
             elif (sock_node_comm in data_sockets):
                 node_conn, node_addr = sock_node_comm.accept()
                 node_data = node_conn.recv(1024)
                 printv('debug','Node data: {0}'.format(node_data))
-                
+                 
                 # Create new thread to handle node
             
     
@@ -306,19 +315,23 @@ def main():
     
     printv('info','SensorNet shutting down...')
     
+    sys.exit()
+    
  
 #---------------------------------------------------------------------
 # Signal handler
 #---------------------------------------------------------------------   
 def sigHandler(signal, frame):
     
-    global exitFlag
+    global exit_flag
     
     print "Exiting gracefully..."
     
-    exitFlag = 1
+    exit_flag = 1
     
-    sys.exit(0)
+    time.sleep(2)
+    
+#     sys.exit(0) 
     
 
 if __name__ == '__main__':
